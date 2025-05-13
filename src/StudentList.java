@@ -16,7 +16,7 @@ public class StudentList {
         for (Student s : students) {
             if (s.getId().equals(student.getId())) {
                 s.setPosition(student.getPosition());
-                s.setCourse(student.getCourse());
+                s.setWatchingVolleyBall(student.getWatchingVolleyBall());
                 break;
             }
         }

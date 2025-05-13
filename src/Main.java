@@ -58,7 +58,7 @@ public class Main {
     private static void updateStudent(Scanner scanner) {
         // TO DO 4: ask for new information to update student
 
-        Student student = new Student(id, position, course);
+        Student student = new Student(id, position, watchingVolleyBall);
         StudentList.updateStudent(student);
         System.out.println("Student updated successfully!");
     }

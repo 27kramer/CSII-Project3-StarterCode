@@ -1,12 +1,12 @@
 public class Student {
     private String id;
     private String position;
-    private String course;
+    private String watchingVolleyBall;
 
-    public Student(String id, String position, String course) {
+    public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
         this.position = position;
-        this.course = course;
+        this.watchingVolleyBall = watchingVolleyBall;
     }
 
     // Getters and setters
@@ -26,12 +26,12 @@ public class Student {
         this.position = position;
     }
 
-    public String getCourse() {
-        return course;
+    public String getWatchingVolleyBall() {
+        return watchingVolleyBall;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public void setWatchingVolleyBall(String watchingVolleyBall) {
+        this.watchingVolleyBall = watchingVolleyBall;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Student {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + position + '\'' +
-                ", course='" + course + '\'' +
+                ", course='" + watchingVolleyBall + '\'' +
                 '}';
     }
 }
