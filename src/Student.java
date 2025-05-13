@@ -51,9 +51,9 @@ public class Student {
         this.PracticesSkipped = PracticesSkipped;
     }
 
-    public void setOnetoten(Double onetoten) {this.onetoten = onetoten;}
+    public void setOnetoten(Double oneToTen) {this.oneToTen = oneToTen;}
 
-    public double getOnetoten(){return onetoten;}
+    public double getOnetoten(){return oneToTen;}
 
     @Override
     public String toString() {
