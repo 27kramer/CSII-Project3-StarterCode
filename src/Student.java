@@ -1,11 +1,11 @@
 public class Student {
     private String id;
-    private String name;
+    private String position;
     private String course;
 
-    public Student(String id, String name, String course) {
+    public Student(String id, String position, String course) {
         this.id = id;
-        this.name = name;
+        this.position = position;
         this.course = course;
     }
 
@@ -18,12 +18,12 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPosition() {
+        return position;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public String getCourse() {
@@ -38,7 +38,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + position + '\'' +
                 ", course='" + course + '\'' +
                 '}';
     }

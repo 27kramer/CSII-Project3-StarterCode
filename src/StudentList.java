@@ -15,7 +15,7 @@ public class StudentList {
     public static void updateStudent(Student student) {
         for (Student s : students) {
             if (s.getId().equals(student.getId())) {
-                s.setName(student.getName());
+                s.setPosition(student.getPosition());
                 s.setCourse(student.getCourse());
                 break;
             }
