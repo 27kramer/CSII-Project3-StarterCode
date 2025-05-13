@@ -2,13 +2,13 @@ public class Student {
     private String id;
     private String position;
     private String watchingVolleyBall;
-    private Double onetoten;
+    private Double oneToTen;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
         this.position = position;
         this.watchingVolleyBall = watchingVolleyBall;
-        this.onetoten = onetoten;
+        this.oneToTen = oneToTen;
     }
 
     // Getters and setters
@@ -34,6 +34,13 @@ public class Student {
 
     public void setWatchingVolleyBall(String watchingVolleyBall) {
         this.watchingVolleyBall = watchingVolleyBall;
+    }
+
+    public Double getOneToTen() {
+        return oneToTen;
+    }
+    public void setOneToTen(Double oneToTen) {
+        this.oneToTen = oneToTen;
     }
 
     public void setOnetoten(Double onetoten) {this.onetoten = onetoten;}
