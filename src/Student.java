@@ -4,6 +4,7 @@ public class Student {
     private String watchingVolleyBall;
     private Double oneToTen;
     private Double PracticesSkipped;
+    private Boolean Starter;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
@@ -11,6 +12,7 @@ public class Student {
         this.watchingVolleyBall = watchingVolleyBall;
         this.oneToTen = oneToTen;
         this.PracticesSkipped = PracticesSkipped;
+        this.Starter = Starter;
     }
 
     // Getters and setters
@@ -50,10 +52,13 @@ public class Student {
     public void setPracticesSkipped(Double PracticesSkipped) {
         this.PracticesSkipped = PracticesSkipped;
     }
+    public Boolean getStarter(){
+        return Boolean;
+    }
 
-    public void setOnetoten(Double onetoten) {this.onetoten = onetoten;}
-
-    public double getOnetoten(){return onetoten;}
+    public void setStarter(Boolean starter) {
+        Starter = starter;
+    }
 
     @Override
     public String toString() {
