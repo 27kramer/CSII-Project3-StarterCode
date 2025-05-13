@@ -3,12 +3,14 @@ public class Student {
     private String position;
     private String watchingVolleyBall;
     private Double oneToTen;
+    private Double PracticesSkipped;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
         this.position = position;
         this.watchingVolleyBall = watchingVolleyBall;
         this.oneToTen = oneToTen;
+        this.PracticesSkipped = PracticesSkipped;
     }
 
     // Getters and setters
@@ -41,6 +43,12 @@ public class Student {
     }
     public void setOneToTen(Double oneToTen) {
         this.oneToTen = oneToTen;
+    }
+    public Double getPracticesSkipped(){
+        return PracticesSkipped;
+    }
+    public void setPracticesSkipped(Double PracticesSkipped) {
+        this.PracticesSkipped = PracticesSkipped;
     }
 
     public void setOnetoten(Double onetoten) {this.onetoten = onetoten;}
