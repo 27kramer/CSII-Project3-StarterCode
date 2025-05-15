@@ -5,6 +5,26 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // TO DO: Create a Student List object that stores preloaded student objects
+        Student s1 = new Student("001", "Libero", "No", 9, 0, false, true);
+        Student s2 = new Student("002", "outside", "yes", 10, 0, true,true);
+        Student s3 = new Student("003", "Middle", "yes", 7, 0, true, true);
+        Student s4 = new Student("004", "right side", "hell naw", 7, 5, true, true);
+        Student s5 = new Student("005", "outside hitter and libero", "yes", 8, 0, false, true);
+        Student s6 = new Student("006", "outside, setter", "yes", 10, 0, true, true);
+        Student s7 = new Student("007", "libero", "yes", 9, 0, true, true);
+        Student s8 = new Student("008", "middle back", "yes", 8, 10, true, false);
+        Student s9 = new Student("009", "Outside/rightside", "no", 8, 1, false, true);
+        Student s10 = new Student("010", "Middle Blocker and Libero", "no", 10, 0, true, true);
+        StudentList.createStudent(s1);
+        StudentList.createStudent(s2);
+        StudentList.createStudent(s3);
+        StudentList.createStudent(s4);
+        StudentList.createStudent(s5);
+        StudentList.createStudent(s6);
+        StudentList.createStudent(s7);
+        StudentList.createStudent(s8);
+        StudentList.createStudent(s9);
+        StudentList.createStudent(s10);
         // Student objects should be each student with info you collected
 
         while (true) {
@@ -58,7 +78,7 @@ public class Main {
     private static void updateStudent(Scanner scanner) {
         // TO DO 4: ask for new information to update student
 
-        Student student = new Student(id, position, watchingVolleyBall);
+        Student student = new Student(id, position, watchingVolleyBall, oneToTen, practicesSkipped, starter, willPlayInFuture);
         StudentList.updateStudent(student);
         System.out.println("Student updated successfully!");
     }
