@@ -3,14 +3,14 @@ public class Student {
     private String position;
     private String watchingVolleyBall;
     private Double oneToTen;
-    private Double PracticesSkipped;
+    private Double practicesSkipped;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
         this.position = position;
         this.watchingVolleyBall = watchingVolleyBall;
         this.oneToTen = oneToTen;
-        this.PracticesSkipped = PracticesSkipped;
+        this.practicesSkipped = practicesSkipped;
     }
 
     // Getters and setters
@@ -45,10 +45,10 @@ public class Student {
         this.oneToTen = oneToTen;
     }
     public Double getPracticesSkipped(){
-        return PracticesSkipped;
+        return practicesSkipped;
     }
-    public void setPracticesSkipped(Double PracticesSkipped) {
-        this.PracticesSkipped = PracticesSkipped;
+    public void setPracticesSkipped(Double practicesSkipped) {
+        this.practicesSkipped = practicesSkipped;
     }
 
 
@@ -56,8 +56,10 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + position + '\'' +
-                ", course='" + watchingVolleyBall + '\'' +
+                ", position='" + position + '\'' +
+                ", do they watch volleyball='" + watchingVolleyBall + '\'' +
+                ", how much do they like volleyball=" + oneToTen + '\'' +
+                "practices skipped=" + practicesSkipped + '\'' +
                 '}';
     }
 }
