@@ -7,7 +7,7 @@ public class Student {
     private boolean starter;
     private boolean willPLayInFuture;
 
-    public Student(String id, String position, String watchingVolleyBall) {
+    public Student(String id, String position, String watchingVolleyBall, double oneToTen, double practicesSkipped, boolean starter, boolean willPlayInFuture) {
         this.id = id;
         this.position = position;
         this.watchingVolleyBall = watchingVolleyBall;
