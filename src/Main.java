@@ -44,6 +44,25 @@ public class Main {
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
         // TO DO 1: fill out the rest of this
+        System.out.print("Enter position: ");
+        String position = scanner.nextLine();
+
+        System.out.print("Do they watch volleyball? (yes/no): ");
+        String watchingVolleyBall = scanner.nextLine();
+
+        System.out.print("How much do they like volleyball (1–10): ");
+        double oneToTen = scanner.nextDouble();
+
+        System.out.print("How many practices have they skipped: ");
+        double practicesSkipped = scanner.nextDouble();
+        scanner.nextLine(); // consume newline
+
+        System.out.print("Are they a starter? (true/false): ");
+        boolean starter = scanner.nextBoolean();
+
+        System.out.print("Will they play in the future? (true/false): ");
+        boolean willPlayInFuture = scanner.nextBoolean();
+        scanner.nextLine(); // consume newline
 
         // TO DO 2: create a student object with this information
         StudentList.createStudent(student);
