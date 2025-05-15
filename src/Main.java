@@ -85,6 +85,7 @@ public class Main {
         scanner.nextLine(); // consume newline
 
         // TO DO 2: create a student object with this information
+        Student student = new Student(id, position, watchingVolleyBall, oneToTen, practicesSkipped, starter, willPlayInFuture);
         StudentList.createStudent(student);
         System.out.println("Student created successfully!");
     }
