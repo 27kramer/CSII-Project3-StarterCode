@@ -4,6 +4,8 @@ public class Student {
     private String watchingVolleyBall;
     private Double oneToTen;
     private Double practicesSkipped;
+    private boolean starter;
+    private boolean willPLayInFuture;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
@@ -11,6 +13,8 @@ public class Student {
         this.watchingVolleyBall = watchingVolleyBall;
         this.oneToTen = oneToTen;
         this.practicesSkipped = practicesSkipped;
+        this.starter = starter;
+        this.willPLayInFuture = willPLayInFuture;
     }
 
     // Getters and setters
@@ -47,8 +51,22 @@ public class Student {
     public Double getPracticesSkipped(){
         return practicesSkipped;
     }
-    public void setPracticesSkipped(Double practicesSkipped) {
+    public void getSetPracticesSkipped(Double practicesSkipped) {
         this.practicesSkipped = practicesSkipped;
+    }
+
+    public boolean setIsStarter() {
+        return starter;
+    }
+    public void setStarter(boolean starter) {
+        this.starter = starter;
+    }
+
+    public boolean getWillPLayInFuture() {
+        return willPLayInFuture;
+    }
+    public void setWillPLayInFuture(boolean willPLayInFuture) {
+        this.willPLayInFuture = willPLayInFuture;
     }
 
 
@@ -60,6 +78,8 @@ public class Student {
                 ", do they watch volleyball='" + watchingVolleyBall + '\'' +
                 ", how much do they like volleyball=" + oneToTen + '\'' +
                 "practices skipped=" + practicesSkipped + '\'' +
+                "is starter=" + starter + '\'' +
+                "will play in future=" + willPLayInFuture + '\'' +
                 '}';
     }
 }
