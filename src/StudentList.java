@@ -12,11 +12,15 @@ public class StudentList {
         return students;
     }
 
-    public static void updateStudent(Student student) {
+    public static void updateStudent(Student updatedStudent) {
         for (Student s : students) {
-            if (s.getId().equals(student.getId())) {
-                s.setPosition(student.getPosition());
-                s.setWatchingVolleyBall(student.getWatchingVolleyBall());
+            if (s.getId().equals(updatedStudent.getId())) {
+                s.setPosition(updatedStudent.getPosition());
+                s.setWatchingVolleyBall(updatedStudent.getWatchingVolleyBall());
+                s.setOneToTen(updatedStudent.getOneToTen());
+                s.setPracticesSkipped(updatedStudent.getPracticesSkipped());
+                s.setStarter(updatedStudent.getIsStarter());
+                s.setWillPLayInFuture(updatedStudent.getWillPLayInFuture());
                 break;
             }
         }

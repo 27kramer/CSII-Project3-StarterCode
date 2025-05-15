@@ -51,11 +51,11 @@ public class Student {
     public Double getPracticesSkipped(){
         return practicesSkipped;
     }
-    public void getSetPracticesSkipped(Double practicesSkipped) {
+    public void setPracticesSkipped(Double practicesSkipped) {
         this.practicesSkipped = practicesSkipped;
     }
 
-    public boolean setIsStarter() {
+    public boolean getIsStarter() {
         return starter;
     }
     public void setStarter(boolean starter) {
