@@ -3,14 +3,18 @@ public class Student {
     private String position;
     private String watchingVolleyBall;
     private Double oneToTen;
-    private Double PracticesSkipped;
+    private Double practicesSkipped;
+    private boolean starter;
+    private boolean willPLayInFuture;
 
     public Student(String id, String position, String watchingVolleyBall) {
         this.id = id;
         this.position = position;
         this.watchingVolleyBall = watchingVolleyBall;
         this.oneToTen = oneToTen;
-        this.PracticesSkipped = PracticesSkipped;
+        this.practicesSkipped = practicesSkipped;
+        this.starter = starter;
+        this.willPLayInFuture = willPLayInFuture;
     }
 
     // Getters and setters
@@ -45,10 +49,24 @@ public class Student {
         this.oneToTen = oneToTen;
     }
     public Double getPracticesSkipped(){
-        return PracticesSkipped;
+        return practicesSkipped;
     }
-    public void setPracticesSkipped(Double PracticesSkipped) {
-        this.PracticesSkipped = PracticesSkipped;
+    public void getSetPracticesSkipped(Double practicesSkipped) {
+        this.practicesSkipped = practicesSkipped;
+    }
+
+    public boolean setIsStarter() {
+        return starter;
+    }
+    public void setStarter(boolean starter) {
+        this.starter = starter;
+    }
+
+    public boolean getWillPLayInFuture() {
+        return willPLayInFuture;
+    }
+    public void setWillPLayInFuture(boolean willPLayInFuture) {
+        this.willPLayInFuture = willPLayInFuture;
     }
 
 
@@ -56,8 +74,12 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + position + '\'' +
-                ", course='" + watchingVolleyBall + '\'' +
+                ", position='" + position + '\'' +
+                ", do they watch volleyball='" + watchingVolleyBall + '\'' +
+                ", how much do they like volleyball=" + oneToTen + '\'' +
+                "practices skipped=" + practicesSkipped + '\'' +
+                "is starter=" + starter + '\'' +
+                "will play in future=" + willPLayInFuture + '\'' +
                 '}';
     }
 }
