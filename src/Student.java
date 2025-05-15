@@ -73,13 +73,13 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
-                ", position='" + position + '\'' +
-                ", do they watch volleyball='" + watchingVolleyBall + '\'' +
-                ", how much do they like volleyball=" + oneToTen + '\'' +
-                "practices skipped=" + practicesSkipped + '\'' +
-                "is starter=" + starter + '\'' +
-                "will play in future=" + willPLayInFuture + '\'' +
+                "id ='" + id + '\'' +
+                ", position ='" + position + '\'' +
+                ", do they watch volleyball ='" + watchingVolleyBall + '\'' +
+                ", how much do they like volleyball =" + oneToTen + '\'' +
+                "practices skipped =" + practicesSkipped + '\'' +
+                "is starter =" + starter + '\'' +
+                "will play in future =" + willPLayInFuture + '\'' +
                 '}';
     }
 }
