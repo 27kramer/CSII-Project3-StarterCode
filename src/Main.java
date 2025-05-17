@@ -13,7 +13,7 @@ public class Main {
         Student s6 = new Student("006", "outside, setter", "yes", 10, 0, true, true);
         Student s7 = new Student("007", "libero", "yes", 9, 0, true, true);
         Student s8 = new Student("008", "middle back", "yes", 8, 10, true, false);
-        Student s9 = new Student("009", "Outside/rightside", "no", 8, 1, false, true);
+        Student s9 = new Student("009", "Outside/Rightside", "no", 8, 1, false, true);
         Student s10 = new Student("010", "Middle Blocker and Libero", "no", 10, 0, true, true);
         StudentList.createStudent(s1);
         StudentList.createStudent(s2);
@@ -35,7 +35,7 @@ public class Main {
             System.out.println("5. Exit");
             System.out.println("6. Analyze Data");
 
-            System.out.print("Choose an option: ");
+            System.out.print("Choose an option by selecting the number: ");
             int option = scanner.nextInt();
             scanner.nextLine(); // Consume newline left-over
 
