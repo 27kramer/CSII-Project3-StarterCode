@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {//emil
         Scanner scanner = new Scanner(System.in);
         // TO DO: Create a Student List object that stores preloaded student objects
         Student s1 = new Student("001", "Libero", "No", 9, 0, false, true);
@@ -33,6 +33,7 @@ public class Main {
             System.out.println("3. Update Student");
             System.out.println("4. Delete Student");
             System.out.println("5. Exit");
+            System.out.println("6. Analyze Data");
 
             System.out.print("Choose an option: ");
             int option = scanner.nextInt();
@@ -54,13 +55,15 @@ public class Main {
                 case 5:
                     System.out.println("Exiting...");
                     return;
+                case 6:
+                    analyzeData();
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
         }
     }
 
-    private static void createStudent(Scanner scanner) {
+    private static void createStudent(Scanner scanner) {//nicky and aydin
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
         // TO DO 1: fill out the rest of this
@@ -90,7 +93,7 @@ public class Main {
         System.out.println("Student created successfully!");
     }
 
-    private static void readStudents() {
+    private static void readStudents() { //william and aydin
         List<Student> students = StudentList.readStudents();
         if (students.isEmpty()) {
             System.out.println("No students found.");
@@ -103,7 +106,7 @@ public class Main {
     }
 
 
-    private static void updateStudent(Scanner scanner) {
+    private static void updateStudent(Scanner scanner) { //william
         System.out.print("Enter the ID of the student to update: ");
         String id = scanner.nextLine();
 
@@ -144,13 +147,49 @@ public class Main {
     }
 
 
-    private static void deleteStudent(Scanner scanner) {
+    private static void deleteStudent(Scanner scanner) { //William and emil
         System.out.print("Enter the ID of the student to delete: ");
         String id = scanner.nextLine();
 
         Student toDelete = new Student(id, "", "", 0.0, 0.0, false, false);
         StudentList.deleteStudent(toDelete);
         System.out.println("Student deleted successfully!");
+    }
+    private static void analyzeData() { //william
+        List<Student> students = StudentList.readStudents();
+        if (students.isEmpty()) {
+            System.out.println("No data to analyze.");
+            return;
+        }
+
+        double maxRating = Double.NEGATIVE_INFINITY;
+        double minRating = Double.POSITIVE_INFINITY;
+        double sumRating = 0;
+
+        double maxSkipped = Double.NEGATIVE_INFINITY;
+        double minSkipped = Double.POSITIVE_INFINITY;
+
+        for (Student s : students) {
+            double rating = s.getOneToTen();
+            double skipped = s.getPracticesSkipped();
+
+            // rating stats
+            sumRating += rating;
+            if (rating > maxRating) maxRating = rating;
+            if (rating < minRating) minRating = rating;
+
+            // practicesSkipped stats
+            if (skipped > maxSkipped) maxSkipped = skipped;
+            if (skipped < minSkipped) minSkipped = skipped;
+        }
+
+        double avgRating = sumRating / students.size();
+
+        System.out.println("\n--- Data Analysis ---");
+        System.out.printf("Rating (1–10) → max: %.1f, min: %.1f, avg: %.2f%n",
+                maxRating, minRating, avgRating);
+        System.out.printf("Practices Skipped → max: %.0f, min: %.0f%n",
+                maxSkipped, minSkipped);
     }
 }
 
