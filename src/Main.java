@@ -43,7 +43,7 @@ public class Main {
                     createStudent(scanner);
                     break;
                 case 2:
-                    readStudents(scanner);
+                    readStudents();
                     break;
                 case 3:
                     updateStudent(scanner);
@@ -90,24 +90,68 @@ public class Main {
         System.out.println("Student created successfully!");
     }
 
-    private static void readStudents(Scanner scanner) {
+    private static void readStudents() {
         List<Student> students = StudentList.readStudents();
-        // TO DO 3: print out each student
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            System.out.println("\nCurrent Students:");
+            for (Student s : students) {
+                System.out.println(s);
+            }
+        }
     }
 
-    private static void updateStudent(Scanner scanner) {
-        // TO DO 4: ask for new information to update student
 
-        Student student = new Student(id, position, watchingVolleyBall, oneToTen, practicesSkipped, starter, willPlayInFuture);
-        StudentList.updateStudent(student);
+    private static void updateStudent(Scanner scanner) {
+        System.out.print("Enter the ID of the student to update: ");
+        String id = scanner.nextLine();
+
+        // Find the existing student
+        List<Student> all = StudentList.readStudents();
+        boolean found = all.stream().anyMatch(s -> s.getId().equals(id));
+        if (!found) {
+            System.out.println("Student with ID " + id + " not found.");
+            return;
+        }
+
+        System.out.print("Enter new position: ");
+        String position = scanner.nextLine();
+
+        System.out.print("Do they watch volleyball? (yes/no): ");
+        String watchingVolleyBall = scanner.nextLine();
+
+        System.out.print("How much do they like volleyball (1–10): ");
+        double oneToTen = scanner.nextDouble();
+
+        System.out.print("How many practices have they skipped: ");
+        double practicesSkipped = scanner.nextDouble();
+        scanner.nextLine(); // consume newline
+
+        System.out.print("Are they a starter? (true/false): ");
+        boolean starter = scanner.nextBoolean();
+
+        System.out.print("Will they play in the future? (true/false): ");
+        boolean willPlayInFuture = scanner.nextBoolean();
+        scanner.nextLine(); // consume newline
+
+        Student updated = new Student(
+                id, position, watchingVolleyBall,
+                oneToTen, practicesSkipped, starter, willPlayInFuture
+        );
+        StudentList.updateStudent(updated);
         System.out.println("Student updated successfully!");
     }
 
-    private static void deleteStudent(Scanner scanner) {
-        // TO DO 5: ask for student ID and store in a variable
 
-        Student student = new Student(id, "", "");
-        StudentList.deleteStudent(student);
+    private static void deleteStudent(Scanner scanner) {
+        System.out.print("Enter the ID of the student to delete: ");
+        String id = scanner.nextLine();
+
+        Student toDelete = new Student(id, "", "", 0.0, 0.0, false, false);
+        StudentList.deleteStudent(toDelete);
         System.out.println("Student deleted successfully!");
     }
 }
+
+
